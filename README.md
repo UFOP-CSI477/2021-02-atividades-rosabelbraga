@@ -1,13 +1,16 @@
-# **CSI606-2021-02 - Estrutura básica do repositório**
+# **CSI606-2021-02 - Sistemas Web I - Turma 11**
 
-## Atualize os seus dados
+## Dados de autoria
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Rosabel Braga
+- Matrícula: 17.2.0000
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 2021.02
+- Link para o seu GitHub: [@rosabelbraga](https://github.com/rosabelbraga)
 
-## [Projeto final:](./Projeto/README.md)
+<!--
+## [Projeto final: Sistema de Gerenciamento para ONGs](./Projeto/README.md)
 
-Apresente uma breve descrição do seu projeto.
+O projeto consiste em um sistema de gerenciamento para cadastro e arrecadação de recursos para Organizações não Governamentais (ONGs), que combatem a fome.
+
+-->
