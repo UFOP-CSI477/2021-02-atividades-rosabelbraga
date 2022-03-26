@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Pessoa</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro Pessoa</h1>
+    </header>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="cadastro_pessoa.html">Cadastro</a>
+        <a href="relatorio_pessoa.html">Relatório</a>
+        <br>
+        <a href="estados.html">Estados</a>
+        <a href="cidades.html">Cidades</a>
+        <a href="produtos.html">Produtos</a>
+        <br>
+        <a href="pessoas.html">Pessoas</a>
+        <a href="compras.html">Compras</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="sair.html">Sair</a>
+    </div>
+
+    <main>
+        <!--
+            method = a maneira como os dados serão enviados.
+            action = para onde. Qual requisição sera feita com os dados. O endereço p qm vou enviar a msg. 
+
+            GET: envio do método pela URL. os dados serão "tragos" pela URL. Usado quando for associar elementos diretamente.
+            POST: os dados são incluidos diretamente no corpo da mensagem que é enviada para o servidor.   
+        -->
+        <form method="post" action="validar.html">
+            <br>
+            <br>
+            <label for="nome_completo">Nome:</label>
+            <input type="text" name="nome" id="nome_completo" placeholder="Nome Completo">
+            <br>
+            <br>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuário">
+            <br>
+            <br>
+
+            <label for="email_usuario">E-mail:</label>
+            <input type="email" name="email_usuario" id="email_usuario" placeholder="E-mail">
+            <br>
+            <br>
+
+            <!--gênero-->
+            <div>
+                <label>Gênero:</label>
+
+                <div>
+                    <input type="radio" name="genero" id="feminino" value="F">
+                    <label for="feminino">Feminino</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" id="masculino" value="M">
+                    <label for="masculino">Masculino</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" id="naobinario" value="NB">
+                    <label for="naobinario">Não binário</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" id="semresposta" value="SR">
+                    <label for="semresposta">Prefiro não informar</label>
+                </div>
+            </div>
+            <br>
+
+            <!--área de interesse-->
+            <div>
+                <label>Áreas de interesse:</label>    
+
+                <div>
+                    <input type="checkbox" name="web" id="web" value="web">
+                    <label for="web">Sistemas Web</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="bd" id="bd" value="bd">
+                    <label for="bd">Banco de dados</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="redes" id="redes" value="redes">
+                    <label for="redes">Redes</label>
+                </div>
+
+            </div>
+            <br>
+
+            <label for="foto_perfil">Foto perfil:</label>
+            <input type="image" name="foto_perfil" id="foto_perfil" placeholder="Foto"> 
+            <br>
+            <br>
+
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Limpar">
+            <br>
+            <br>
+
+        </form>
+    </main>
+
+    <footer>
+        Sistemas Web I - <a href="https://icea.ufop.br/" target="_blank">UFOP/ICEA</a>
+    </footer>
+</body>
+</html>
