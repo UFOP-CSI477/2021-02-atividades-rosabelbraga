@@ -7,12 +7,12 @@
 
 <!--### Resumo
 
-  O projeto consiste em um sistema de gerenciamento para cadastro e arrecadação de recursos para Organizações não Governamentais (ONGs), que combatem a fome. Onde será possível o cadastro de ONGs, usuários, realização de doação via depósito ou de alimentos, acomanhamento da doação, entre outras funcionalidades. 
+  O projeto consiste em um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social. Neste será possível o cadastro do projeto, contendo: descrição, e-mail para contato, imagem, link externo que comprova a existência do mesmo e informações para a realização da doação via parceria com supermercados locais ou depósito bancário. Também será possível comentários de pessoas que já contribuíram ou são atendidas pelo mesmo.
 -->
 <!-- Apresentar o tema. -->
 <!--### 1. Tema
 
-  O trabalho final tem como tema o desenvolvimento de um sistema de gerenciamento para cadastro e arrecadação de recursos para ONGs, que combatem a fome.
+  O trabalho final tem como tema o desenvolvimento de um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
 -->
 <!-- Descrever e limitar o escopo da aplicação. -->
 <!--### 2. Escopo
@@ -21,20 +21,15 @@
 
   * CRUD Administrador;
   * CRUD Usuário;
-  * Cadastro de ONGs;
-  * Cadastro de doadores;
-  * Cadastro de comércios;
-  * Busca por ONGs;
-  * Busca por comércios;
-  * Execução de doação via depósito em dinheiro;
-  * Execução de doação via entrega de alimentos na ONG;
-  * Confirmação da conclusão da doação;
-  * Acompanhamento de doações realizadas.
+  * Cadastro do projeto;
+  * Busca por projeto;
+  * Busca por localidade;
+  * Comentário de usuários externos.
 -->
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 <!--### 3. Restrições
 
-  Neste trabalho não serão considerados segurança ao armazenar dados do usuário; comprovação da veracidade dos dados da ONG cadastrada, e do usuário; auditória dos depósitos realizados.
+  Neste trabalho não serão considerados segurança ao armazenar dados do usuário; e comprovação da veracidade dos dados cadastrados.
 -->
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 <!--### 4. Protótipo
