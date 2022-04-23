@@ -5,7 +5,7 @@
 - Nome: Rosabel Braga
 - Matrícula: 17.2.0000
 - Curso: Sistemas de Informação
-- Semestre/Ano correntes: 2021.02
+- Semestre/Ano correntes: 21.02
 - Link para o seu GitHub: [@rosabelbraga](https://github.com/rosabelbraga)
 
 
