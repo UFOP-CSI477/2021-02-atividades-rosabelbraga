@@ -11,6 +11,6 @@
 <!--
 ## [Projeto final: Sistema de doação para projetos independentes](./Projeto/README.md)
 
-O trabalho final tem como tema o desenvolvimento de um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
+O projeto consiste em um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
 
 -->
