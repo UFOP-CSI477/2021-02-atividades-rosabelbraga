@@ -1,21 +1,21 @@
-# **CSI606-2021-02 - Remoto - Proposta de Trabalho Final**
-<!--## *Aluna: Rosabel Braga*-->
+# **CSI606-2021-02 - Proposta de Trabalho Final**
+## *Aluna: Rosabel Braga*
 
 --------------
 
 <!-- Descrever um resumo sobre o trabalho. -->
 
-<!--### Resumo
+### Resumo
 
   O projeto consiste em um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social. Neste será possível o cadastro do projeto, contendo: descrição, e-mail para contato, imagem, link externo que comprova a existência do mesmo e informações para a realização da doação via parceria com supermercados locais ou depósito bancário. Também será possível comentários de pessoas que já contribuíram ou são atendidas pelo mesmo.
--->
+
 <!-- Apresentar o tema. -->
-<!--### 1. Tema
+### 1. Tema
 
   O trabalho final tem como tema o desenvolvimento de um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
--->
+
 <!-- Descrever e limitar o escopo da aplicação. -->
-<!--### 2. Escopo
+### 2. Escopo
 
   Este projeto terá as seguintes funcionalidades:
 
@@ -25,18 +25,18 @@
   * Busca por projeto;
   * Busca por localidade;
   * Comentário de usuários externos.
--->
+
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
-<!--### 3. Restrições
+### 3. Restrições
 
   Neste trabalho não serão considerados segurança ao armazenar dados do usuário; e comprovação da veracidade dos dados cadastrados.
--->
-<!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
-<!--### 4. Protótipo
 
-  Protótipos para as páginas (descrever quais páginas) foram elaborados, e podem ser encontrados em...
--->
-<!--### 5. Referências
+<!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
+### 4. Protótipo
+
+  Protótipos para as páginas de cadastro; projeto cadastrado; busca; login; e principal (home) foram elaborados, e podem ser encontrados [aqui](https://ninjamock.com/s/L1Z96Jx).
+
+### 5. Referências
 
   COMIDA INVISÍVEL. Disponível em: <https://app.comidainvisivel.com.br/#/home>. Acesso em 23/03/22.
   
@@ -47,4 +47,3 @@
   JESUS, Carolina Maria De. **Quarto de Despejo**. Ática; 10ª edição. 03/12/2019.
   
   MONTEIRO, Cleverton. **Projeto "Quem tem fome tem pressa" promove terceira arrecadação de mantimentos**. UFOP. 25/08/21. Disponível em: <https://ufop.br/noticias/comunidade/projeto-quem-tem-fome-tem-pressa-promove-terceira-arrecadacao-de-mantimentos>. Acesso em 23/03/22.
--->
