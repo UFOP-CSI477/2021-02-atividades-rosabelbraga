@@ -7,12 +7,12 @@
 
 ### Resumo
 
-  O projeto consiste em um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social. Neste será possível o cadastro do projeto, contendo: descrição, e-mail para contato, imagem, link externo que comprova a existência do mesmo e informações para a realização da doação via parceria com supermercados locais ou depósito bancário. Também será possível comentários de pessoas que já contribuíram ou são atendidas pelo mesmo.
+O projeto consiste em um sistema facilitador de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social. Neste será possível o cadastro do projeto, contendo: descrição, e-mail para contato, imagem, link externo que comprova a existência do mesmo e informações para a realização da doação via parceria com supermercados locais ou depósito bancário. Também será possível comentários de pessoas que já contribuíram ou são atendidas pelo mesmo.
 
 <!-- Apresentar o tema. -->
 ### 1. Tema
 
-  O trabalho final tem como tema o desenvolvimento de um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
+O trabalho final tem como tema o desenvolvimento de um sistema facilitador de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
 
 <!-- Descrever e limitar o escopo da aplicação. -->
 ### 2. Escopo
@@ -34,7 +34,7 @@
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos para as páginas de cadastro; projeto cadastrado; busca; login; e principal (home) foram elaborados, e podem ser encontrados [aqui](https://ninjamock.com/s/L1Z96Jx).
+Protótipos para as páginas de cadastro; projeto cadastrado; busca; login; e principal (home) foram elaborados, e podem ser encontrados [aqui](https://ninjamock.com/s/L1Z96Jx).
 
 ### 5. Referências
 
