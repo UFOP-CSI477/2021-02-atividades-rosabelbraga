@@ -5,10 +5,10 @@
 - Nome: Rosabel Braga
 - Matrícula: 17.2.0000
 - Curso: Sistemas de Informação
-- Semestre/Ano correntes: 2021.02
+- Semestre/Ano correntes: 21.02
 - Link para o seu GitHub: [@rosabelbraga](https://github.com/rosabelbraga)
 
 
 ## [Projeto final: Sistema de doação para projetos independentes](./Projeto/README.md)
 
-O projeto consiste em um sistema de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
+O projeto consiste em um sistema facilitador de doação para projetos independentes que arrecadam mantimentos e distribuem para a população em situação de vulnerabilidade social.
