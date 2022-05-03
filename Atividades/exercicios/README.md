@@ -2,3 +2,4 @@
 
 **Roteiro**: [LessonScripts](https://github.com/fboliveira/CSI477-Sistemas-Web/tree/master/LessonScripts)
 
+**Referências**: [Lectures](https://github.com/fboliveira/CSI477-Sistemas-Web/tree/master/Lectures)
