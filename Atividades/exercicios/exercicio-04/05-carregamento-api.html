@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">        
+        <link rel="stylesheet" href="/exercicio-04/style.css">
+        <link rel="stylesheet" href="/exercicio-04/forms.css">
+        
+        <title>Intodução ao JS</title>
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body onload="carregarEstados()">
+        <div class="container">
+            <h1 class="h1 mt-4 text-primary">Dados pessoais</h1>
+            <form action="" class="form" name="frmDados">
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <label for="name">Nome:</label>
+                        <input type="text" name="nome" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="name">Sobrenome:</label>
+                        <input type="text" name="sobrenome" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <select name="estados" id="estados" onchange="carregarCidades()">
+                            <option value="">Selecione:</option>
+                        </select>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <select name="cidades" id="cidades">
+                            <option value="">Selecione:</option>
+                        </select>
+                    </div>             
+                </div>
+                
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label for="name">Endereço:</label>
+                        <input type="text" name="endereco" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="telefone">E-mail:</label>
+                        <input type="text" name="email" class="form-control">
+                    </div>
+                </div>
+        
+                <div class="row mt-4">
+                    <input type="button" value="Salvar" class="btn btn-dark" onClick="carregarDados();">
+                </div>       
+        
+                <div>
+                    <hr class="mt-4">
+                    <div class="content">
+                    <div id="nome"></div>
+                    <div id="sobrenome"></div>
+                    <div id="estados"></div>
+                    <div id="cidades"></div>
+                    <div id="endereco"></div>
+                    <div id="email"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="05-carregamento-api.js"></script>
+    </body>
+</html>

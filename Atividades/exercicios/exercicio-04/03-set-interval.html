@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/exercicio-04/style.css">
+        
+        <title>Contador</title>
+
+        <script>
+            var id;
+            var executando = false;
+
+            function dataHoje(){
+                document.getElementById("dados").innerHTML = Date();                
+            }
+
+            function dataIniciar(){
+                if (!executando){
+                    id = setInterval(dataHoje);
+                    executando = true;
+                }
+            }
+
+            function parar(){
+                clearInterval(id);
+                executando = false;
+            }
+
+            function reiniciar(){
+                parar();
+                document.getElementById("dados").innerHTML = "";
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Olá Mundo!</h1>
+            <p>
+                Saiba a data e às horas em tempo real!*
+            </p>
+            <p style="font-size: 9px;">
+                *Horário de Brasília.
+            </p>
+        </header>
+
+        <main>
+            <div id="dados"></div>
+
+            <div id="contador"></div>
+    
+            <input type="button" value="Data" onclick="dataIniciar()">
+    
+            <input type="button" value="Parar" onclick="parar()">
+    
+            <input type="button" value="Reiniciar" onclick="reiniciar()">
+        </main>
+    </body>
+</html>
