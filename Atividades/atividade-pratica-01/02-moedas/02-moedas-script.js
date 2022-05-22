@@ -47,8 +47,6 @@ function calcularValor(data, value){
   var resultado = Number(data[0]["high"]) * Number(value)
 
   document.getElementById("valorConvertido").value = resultado
-
-  console.log(resultado)
 }
 
 function limpar(){
