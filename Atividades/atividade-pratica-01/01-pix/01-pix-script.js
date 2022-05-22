@@ -132,7 +132,6 @@ function adicionarTransacao(){
         const T = new TransacaoCliente(operacao.value, valor.value)
 
         listaOperacao.push(t)
-        console.log(listaOperacao)
 
         document.getElementById('tabelaOperacao').appendChild(tabelaOperacao)
     }
@@ -152,15 +151,12 @@ function finalizarTransacao(){
     }
 
     saldo = saldoRecebimento - saldoEnvio
-    console.log(saldo)
 
     var tabelaOperacao = document.createElement('tr')
     tabelaOperacao.insertCell(0).innerHTML = saldo
-    console.log(tabelaOperacao)
 
     const saldo2 = new SaldoCliente()
     listaOperacao.push(saldo2)
-    console.log(listaOperacao)
     document.getElementById('tabelaSaldoFinal').appendChild(tabelaOperacao)
 }
 
