@@ -2,6 +2,18 @@
 
 html{
     font-family: 'Roboto', sans-serif;
+    font-size: 18pt;
+}
+
+body{
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.cabecalho{
+    background-color: rgb(132, 153, 148);
 }
 
 h1{
@@ -11,9 +23,33 @@ h1{
     color: rgb(24, 6, 6);
 }
 
-footer{
+main{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.buttons{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.formatacao{
+    font-size: 18pt;
+}
+
+a{
     color: rgb(61, 52, 52);
     font-size: 15pt;
+    text-decoration: none;
+    padding: 8px;
+}
+
+a:hover{
+   font-weight: bold; 
+}
+
+footer{
+    font-size: 14pt;
     text-align: center;
     margin-top: 50px;
 }
