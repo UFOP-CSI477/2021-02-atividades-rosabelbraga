@@ -138,7 +138,7 @@ function adicionarTransacao(){
     }
 }
 
-function finalizar(){
+function finalizarTransacao(){
     let saldo = 0.0
     let saldoEnvio = 0.0
     let saldoRecebimento = 0.0
