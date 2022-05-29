@@ -1,14 +1,17 @@
-## Atividades propostas
+# Atividades propostas
 
-**Roteiro**: [LessonScripts](https://github.com/fboliveira/CSI477-Sistemas-Web/tree/master/LessonScripts)
+## Roteiro
 
-**Referências**: [Lectures](https://github.com/fboliveira/CSI477-Sistemas-Web/tree/master/Lectures)
+  [LessonScripts](https://github.com/fboliveira/CSI477-Sistemas-Web/tree/master/LessonScripts)
 
-**Adendos**
+## Referências 
 
-- [NinjaMock](https://ninjamock.com/home/index) - Para criação de protótipo 
+  [Lectures](https://github.com/fboliveira/CSI477-Sistemas-Web/tree/master/Lectures)
+
+## Adendos
   
 - ***Front tools***
+  - [NinjaMock](https://ninjamock.com/home/index) - Para criação de protótipo 
   - [universe.io](https://uiverse.io/) - estilização 
   - [emoticons](https://pt.piliapp.com/facebook-symbols/)
   - [unsplash](https://unsplash.com/) - obtenção de imagens livres
