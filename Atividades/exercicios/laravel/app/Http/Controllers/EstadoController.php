@@ -23,9 +23,9 @@ class EstadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() // method="post" action="store"
     {
-        //
+        return view('estados.create');
     }
 
     /**
@@ -36,7 +36,16 @@ class EstadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //dd($request); 
+
+        // $estado = new Estado;
+        // $estado->nome = $request->nome;
+        // $estado->sigla = $request->sigla;
+        // $estado->save();
+
+        Estado::create($request->all());
+        session()->flash('mensagem', 'Estado cadastrado com sucesso!');
+        return redirect()->route('estados.index');
     }
 
     /**
@@ -47,7 +56,7 @@ class EstadoController extends Controller
      */
     public function show(Estado $estado)
     {
-        //
+        return view('estados.show', [ 'estado' => $estado]);    
     }
 
     /**
@@ -56,9 +65,9 @@ class EstadoController extends Controller
      * @param  \App\Models\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function edit(Estado $estado)
+    public function edit(Estado $estado) // exibir o form ->action:update
     {
-        //
+        return view('estados.edit', [ 'estado' => $estado ]);
     }
 
     /**
@@ -70,7 +79,12 @@ class EstadoController extends Controller
      */
     public function update(Request $request, Estado $estado)
     {
-        //
+        // dd($request->all());
+        $estado->fill($request->all());
+        $estado->save();
+
+        session()->flash('mensagem', 'Estado atualizado com sucesso!');
+        return redirect()->route('estados.index');
     }
 
     /**
@@ -81,6 +95,15 @@ class EstadoController extends Controller
      */
     public function destroy(Estado $estado)
     {
-        //
+        // dd($estado);
+
+        // Validação:
+        if ( $estado->cidades->count() > 0 ) {
+            session()->flash('mensagem', 'Exclusão não permitida! Existem cidades associadas.');
+        } else {
+            $estado->delete();
+            session()->flash('mensagem', 'Estado excluído com sucesso!');
+        }
+        return redirect()->route('estados.index');
     }
 }

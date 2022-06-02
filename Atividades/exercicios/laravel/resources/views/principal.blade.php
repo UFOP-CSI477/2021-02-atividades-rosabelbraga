@@ -49,7 +49,7 @@
           <div class="alert alert-success">
             {{ session('mensagem') }}
           </div>
-
+          
         @endif
         @yield('conteudo')
       </div>
