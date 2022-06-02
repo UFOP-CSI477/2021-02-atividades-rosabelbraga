@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EstadoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,28 +15,36 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Estado;
 
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('principal');
 
-Route::get('/ola', function(){
-    return 'Olá, mundo!';
-});
+Route::resource('/estados', EstadoController::class);
 
-Route::get('/estados/todos', function(){
-    $estados =  Estado::all();
 
-    return view('lista', [ 'dados' => $estados]);
+// Route::get('/ola', function(){
+//     return 'Olá, mundo!';
+// });
 
-});
+// Route::get('/estados/todos', function(){
+//     $estados =  Estado::all();
 
-Route::get('/estados/{id}', function($id){
-    //$estado = Estado::find ($id);
-    $estado = Estado::findOrFail ($id);
+//     return view('lista', [ 'dados' => $estados]);
 
-    if ($estado == null){
-        return 'ID inválido';
-    }
+// });
 
-    return view ('lista', ['dados' => $estado]);
-});
+// Route::get('/estados/{id}', function($id){
+//     //$estado = Estado::find ($id);
+//     $estado = Estado::findOrFail ($id);
+
+//     if ($estado == null){
+//         return 'ID inválido';
+//     }
+
+//     return view ('lista', ['dados' => $estado]);
+// });
