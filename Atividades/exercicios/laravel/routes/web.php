@@ -14,7 +14,7 @@ use App\Http\Controllers\EstadoController;
 */
 
 use App\Models\Estado;
-
+use App\Http\Controllers\CidadeController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -25,6 +25,7 @@ Route::get('/', function () {
 })->name('principal');
 
 Route::resource('/estados', EstadoController::class);
+Route::resource('/cidades', CidadeController::class);
 
 
 // Route::get('/ola', function(){
