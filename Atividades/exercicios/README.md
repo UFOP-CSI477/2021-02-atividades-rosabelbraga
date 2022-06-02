@@ -16,6 +16,7 @@
   - [emoticons](https://pt.piliapp.com/facebook-symbols/)
   - [unsplash](https://unsplash.com/) - obtenção de imagens livres
   - [flaticon](https://www.flaticon.com/br/) - obtenção de ícones
+  - [BEM](https://desenvolvimentoparaweb.com/css/bem/) - metodologia CSS / convenção de nomenclatura
   
 - ***Back tools***
   - [HTTP Status Dogs](https://httpstatusdogs.com/)
