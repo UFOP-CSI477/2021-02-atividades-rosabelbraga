@@ -24,7 +24,7 @@ Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
-Route::resource('/estados', EstadoController::class);
+Route::resource('/estados', EstadoController::class)->middleware('auth');
 Route::resource('/cidades', CidadeController::class);
 
 
@@ -49,3 +49,6 @@ Route::resource('/cidades', CidadeController::class);
 
 //     return view ('lista', ['dados' => $estado]);
 // });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
