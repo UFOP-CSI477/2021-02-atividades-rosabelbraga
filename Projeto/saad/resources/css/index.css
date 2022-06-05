@@ -1,0 +1,16 @@
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+
+    margin-top: 50px;
+}
+
+.cards-index{
+    display: flex;
+    padding: 100px;
+    margin-left: 300px;
+
+    margin-bottom: 80px;
+}

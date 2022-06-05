@@ -1,0 +1,21 @@
+.descricaoProjeto{
+    display: flex;
+}
+
+.textoSobre > p{
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+
+    text-align: justify;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; 
+
+    margin-top: 50px;
+}
