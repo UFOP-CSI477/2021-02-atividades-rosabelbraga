@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Projeto;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,33 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/cadastro', function () {
+    return view('cadastro');
+});
+
+Route::get('/projetos', function () {
+    $projetos = Projeto::all();
+
+    return view('projetos', [ 'dados' => $projetos ]);
+});
+
+Route::get('/projetos/{$id}', function ($id) {
+    
+    $projeto = Projeto::findOrFail($id);
+
+    if( $projeto == null){
+        return 'ID inválido';
+    }
+
+    return view('projetos', [ 'dados' => $projeto]);
 });
