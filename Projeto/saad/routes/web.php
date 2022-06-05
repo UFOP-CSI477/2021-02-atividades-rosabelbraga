@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Projeto;
+use App\Http\Controllers\ProjetoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,34 +16,38 @@ use App\Models\Projeto;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('principal');
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::resource('/projetos', ProjetoController::class);
 
-Route::get('/about', function () {
-    return view('about');
-});
 
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
 
-Route::get('/projetos', function () {
-    $projetos = Projeto::all();
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
-    return view('projetos', [ 'dados' => $projetos ]);
-});
+// Route::get('/about', function () {
+//     return view('about');
+// });
 
-Route::get('/projetos/{$id}', function ($id) {
+// Route::get('/cadastro', function () {
+//     return view('cadastro');
+// });
+
+// Route::get('/lista', function () {
+//     $projetos = Projeto::all();
+
+//     return view('lista', [ 'dados' => $projetos ]);
+// });
+
+// Route::get('/lista/{$id}', function ($id) {
     
-    $projeto = Projeto::findOrFail($id);
+//     $projeto = Projeto::findOrFail($id);
 
-    if( $projeto == null){
-        return 'ID inválido';
-    }
+//     if( $projeto == null){
+//         return 'ID inválido';
+//     }
 
-    return view('projetos', [ 'dados' => $projeto]);
-});
+//     return view('projetos', [ 'dados' => $projeto]);
+// });
