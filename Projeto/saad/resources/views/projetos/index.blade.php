@@ -22,4 +22,6 @@
         </tbody>
     </table>
 
+    {{ $projetos->links() }}
+
 @endsection
