@@ -27,7 +27,7 @@
                     <a class="nav-link" href="{{route('projetos.index')}}">Projetos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    <a class="nav-link" href="{{ route('projetos.create')}}">Cadastro</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="sobre.html">Sobre</a>
@@ -121,6 +121,16 @@
         </div>
     </main>
     -->
+
+    @if(session('mensagem'))
+
+        <div class="alert alert-">
+            <success>
+                {{ session('mensagem')}}
+            </success>
+        </div>
+
+    @endif
 
     @yield('conteudo')
 

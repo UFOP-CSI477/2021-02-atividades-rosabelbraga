@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProjetoRequest;
+use App\Http\Requests\UpdateProjetoRequest;
 use App\Models\Projeto;
-use Illuminate\Http\Request;
 
 class ProjetoController extends Controller
 {
@@ -23,9 +24,9 @@ class ProjetoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() //method='post' action='store'
     {
-        //
+        return view('projetos.create');
     }
 
     /**
@@ -34,9 +35,11 @@ class ProjetoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProjetoRequest $request)
     {
-        //
+        Projeto::create($request->all());
+        session()->flash('mensagem', 'Projeto cadastrado com sucesso!');
+        return redirect()->route('projetos.index');
     }
 
     /**
@@ -47,7 +50,7 @@ class ProjetoController extends Controller
      */
     public function show(Projeto $projeto)
     {
-        //
+        return view('projetos.show', ['projeto' => $projeto]);
     }
 
     /**
@@ -58,7 +61,7 @@ class ProjetoController extends Controller
      */
     public function edit(Projeto $projeto)
     {
-        //
+        return view('projetos.edit', ['projeto' => $projeto]);
     }
 
     /**
@@ -68,9 +71,16 @@ class ProjetoController extends Controller
      * @param  \App\Models\Projeto  $projeto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Projeto $projeto)
+    public function update(UpdateProjetoRequest $request, Projeto $projeto)
     {
-        //
+        $projeto->fill($request->all());
+        if ($projeto->save()) {
+            session()->flash('mensagem', 'Projeto atualizado com sucesso!');
+            return redirect()->route('projetos.show', $projeto->id);
+        } else {
+            session()->flash('mensagem-erro', 'Erro na atualização do Projeto!');
+            return back()->withInput();
+        }
     }
 
     /**
@@ -81,6 +91,12 @@ class ProjetoController extends Controller
      */
     public function destroy(Projeto $projeto)
     {
-        //
+        if($projeto->delete()) {
+            session()->flash('mensagem', 'Projeto excluído com sucesso!');
+            return redirect()->route('projetos.index');
+        } else {
+            session()->flash('mensagem-erro', 'Erro na exclusão do Projeto!');
+            return back();
+        }
     }
 }
