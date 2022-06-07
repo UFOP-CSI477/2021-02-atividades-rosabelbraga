@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreProjetoRequest;
-use App\Http\Requests\UpdateProjetoRequest;
 use App\Models\Projeto;
+use Illuminate\Http\Request;
 
 class ProjetoController extends Controller
 {
@@ -35,7 +34,7 @@ class ProjetoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProjetoRequest $request)
+    public function store(Request $request)
     {
         Projeto::create($request->all());
         session()->flash('mensagem', 'Projeto cadastrado com sucesso!');
@@ -71,7 +70,7 @@ class ProjetoController extends Controller
      * @param  \App\Models\Projeto  $projeto
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProjetoRequest $request, Projeto $projeto)
+    public function update(Request $request, Projeto $projeto)
     {
         $projeto->fill($request->all());
         if ($projeto->save()) {

@@ -132,6 +132,14 @@
 
     @endif
 
+    @if(session('mensagem-erro'))
+    <div class="container">
+        <div class="alert alert-danger">
+            {{ session('mensagem-erro') }}
+        </div>
+    </div>
+    @endif
+
     @yield('conteudo')
 
     <footer>
