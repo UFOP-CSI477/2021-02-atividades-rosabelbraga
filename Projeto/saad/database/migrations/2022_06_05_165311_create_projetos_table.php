@@ -16,12 +16,14 @@ return new class extends Migration
         Schema::create('projetos', function (Blueprint $table) {
             $table->id();
             $table->string('nome_projeto', 100);
+            $table->text('email_responsavel');
             $table->string('endereco', 100)->nullable();
             $table->string('complemento', 100)->nullable();
             $table->string('estado', 50)->nullable();
             $table->string('cidade', 50)->nullable();
             $table->string('cep', 9)->nullable();
             $table->longText('descricao')->nullable();
+            $table->text('url')->nullable();
             $table->binary('photo')->nullable();
             $table->timestamps();
         });

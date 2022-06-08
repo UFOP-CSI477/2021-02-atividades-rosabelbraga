@@ -21,6 +21,14 @@ Route::get('/', function () {
 
 Route::resource('/projetos', ProjetoController::class);
 
+Route::get('/sobre', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
+
 
 
 // Route::get('/home', function () {
