@@ -18,7 +18,7 @@
     </div>
 
     <div class="imagem">
-        <img class="center" src="/resources/img/food-about.jpg" alt="alimentos">
+        <img class="center" src="{{ public_path('img/food-about.jpg') }}" alt="alimentos">
     </div>
 
 @endsection

@@ -8,7 +8,7 @@
         </h1>
     </div>
     
-    <div class="text-justify" style="font-size: 16pt; background-color: rgb(240, 227, 227)">
+    <div class="text-justify" style="font-size: 16pt; background-color: rgb(240, 227, 227); padding: 30px;">
         <ul>
             <li><strong>Nome</strong>: {{ $projeto->nome_projeto }}</li>
             <li><strong>Cidade</strong>: {{ $projeto->cidade }}</li>
@@ -22,22 +22,23 @@
 
     <div class="text-center buttons" style="padding: 15px; margin-top: 30px; margin-bottom: 15px;">
         <a href="{{ route('projetos.edit', $projeto->id) }}" class="btn btn-primary">Editar</a>
-        <a href="{{ url()->previous() }}" class="btn btn-warning">Voltar</a>        
+        <a href="{{ url()->previous() }}" class="btn btn-warning">Voltar</a>
+        
+        <form action="{{ route('projetos.destroy', $projeto->id) }}" method="post" onsubmit="return confirmaExclusao()">
+
+            @csrf
+            @method('DELETE')
+
+            <input type="submit" value="Excluir" class="btn btn-danger">
+        </form>
     </div>
 
 
-    <form action="{{ route('projetos.destroy', $projeto->id) }}" method="post" onsubmit="return confirmaExclusao()">
-
-        @csrf
-        @method('DELETE')
-
-        <input type="submit" value="Excluir" class="btn btn-danger">
-
-    </form>
+    
 
     <script>
         function confirmaExclusao() {
-            return window.confirm("Confirma a exclusão do Estado?");
+            return window.confirm("Confirma a exclusão do Projeto?");
         }
     </script>
 
