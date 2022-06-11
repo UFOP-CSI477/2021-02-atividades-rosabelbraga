@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
-Route::resource('/projetos', ProjetoController::class);
+Route::resource('/projetos', ProjetoController::class);/*->middleware('auth');*/
 
 Route::get('/sobre', function () {
     return view('about');
@@ -59,3 +59,7 @@ Route::get('/home', function () {
 
 //     return view('projetos', [ 'dados' => $projeto]);
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

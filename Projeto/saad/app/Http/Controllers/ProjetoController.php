@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Projeto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProjetoController extends Controller
 {
@@ -25,7 +26,13 @@ class ProjetoController extends Controller
      */
     public function create() //method='post' action='store'
     {
-        return view('projetos.create');
+        if ( Auth::check() ){
+            return view('projetos.create');    
+        } else {
+            session()->flash('mensagem', 'Operação não permitida.' );
+            return redirect()->route('login');
+        }
+        
     }
 
     /**
@@ -60,7 +67,12 @@ class ProjetoController extends Controller
      */
     public function edit(Projeto $projeto)
     {
-        return view('projetos.edit', ['projeto' => $projeto]);
+        if ( Auth::check() ){
+            return view('projetos.edit', ['projeto' => $projeto]);    
+        } else {
+            session()->flash('mensagem', 'Operação não permitida.' );
+            return redirect()->route('login');
+        }
     }
 
     /**
