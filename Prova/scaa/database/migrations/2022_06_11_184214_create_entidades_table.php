@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('entidades', function (Blueprint $table) {
             $table->id();
+            $table->string('nome', 100);
+            $table->string('bairro', 100);
+            $table->string('cidade', 100);
+            $table->string('estado', 50);
             $table->timestamps();
         });
     }

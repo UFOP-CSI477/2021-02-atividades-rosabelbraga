@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('coletas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('item_id')->constrained();
+            $table->foreignId('entidade_id')->constrained();
+            $table->float('quantidade', 8, 2);
+            $table->date('data');
             $table->timestamps();
         });
     }
