@@ -2,16 +2,26 @@
 
 @section('conteudo')
 
+    <style>
+        thead{
+            font-size: 18pt;
+        }
+
+        tbody{
+            font-size: 16pt;
+        }
+    </style>
+
 <!--<a href="{{ route('projetos.create')}}">Cadastrar</a>-->
 
     <div class="jumbotron text-center btn-primary" style="padding: 15px; margin-top: 20px; margin-bottom: 30px;">
         <h1>
             Projetos cadastrados 
         </h1>
-    </div>
-
+    </div>        
+    
     <table class="table table-bordered table-hover table-striped">
-        <thead class="thead-dark" style="font-size: 16pt;">
+        <thead class="thead-dark">
             <tr>
                 <th>Nome projeto</th>
                 <th>Estado</th>
@@ -19,7 +29,7 @@
                 <th>Exibir</th>
             </tr>
         </thead>
-        <tbody style="font-size: 14pt;">
+        <tbody>
 
             @foreach($projetos as $p)
                 <tr>

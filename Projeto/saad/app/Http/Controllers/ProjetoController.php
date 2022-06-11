@@ -70,7 +70,7 @@ class ProjetoController extends Controller
         if ( Auth::check() ){
             return view('projetos.edit', ['projeto' => $projeto]);    
         } else {
-            session()->flash('mensagem', 'Operação não permitida.' );
+            session()->flash('mensagem-erro', 'Operação não permitida.' );
             return redirect()->route('login');
         }
     }
@@ -102,12 +102,14 @@ class ProjetoController extends Controller
      */
     public function destroy(Projeto $projeto)
     {
-        if($projeto->delete()) {
-            session()->flash('mensagem', 'Projeto excluído com sucesso!');
-            return redirect()->route('projetos.index');
-        } else {
-            session()->flash('mensagem-erro', 'Erro na exclusão do Projeto!');
-            return back();
+        if ( Auth::check() ) {
+            if($projeto->delete()) {
+                session()->flash('mensagem', 'Projeto excluído com sucesso!');
+                return redirect()->route('projetos.index');
+            } else {
+                session()->flash('mensagem-erro', 'Erro na exclusão do Projeto!');
+                return back();
+            }
         }
     }
 }

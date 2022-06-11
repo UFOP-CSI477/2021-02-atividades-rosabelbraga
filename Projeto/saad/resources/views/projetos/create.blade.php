@@ -2,6 +2,15 @@
 
 @section('conteudo')
 
+    <style>
+        .cadastroProjeto{
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-bottom: 50px;
+        }
+    </style>
+
     <div class="jumbotron text-center btn-primary" style="padding: 15px; margin-top: 20px; margin-bottom: 70px;">
         <h1>
             Cadastro do projeto 
