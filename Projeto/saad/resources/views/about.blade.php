@@ -2,6 +2,17 @@
 
 @section('conteudo')
 
+    <style>
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%; 
+
+            margin-top: 50px;
+        }
+    </style>
+
     <div class="jumbotron text-center btn-primary" style="padding: 15px; margin-top: 20px; margin-bottom: 50px;">
         <h1>
             Quem somos 
@@ -18,7 +29,7 @@
     </div>
 
     <div class="imagem">
-        <img class="center" src="{{ public_path('img/food-about.jpg') }}" alt="alimentos">
+        <img class="center" src="public_path('/img/food-about.jpg')" alt="alimentos">
     </div>
 
 @endsection

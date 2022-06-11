@@ -29,7 +29,7 @@ class ProjetoController extends Controller
         if ( Auth::check() ){
             return view('projetos.create');    
         } else {
-            session()->flash('mensagem', 'Operação não permitida.' );
+            session()->flash('mensagem-erro', 'Operação não permitida. Para realizar cadastro do projeto é necessário realizar login, ou se registrar na plataforma.' );
             return redirect()->route('login');
         }
         

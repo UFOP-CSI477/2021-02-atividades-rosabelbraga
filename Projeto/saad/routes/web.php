@@ -16,8 +16,8 @@ use App\Http\Controllers\ProjetoController;
 */
 
 Route::get('/', function () {
-    return view('principal');
-})->name('principal');
+    return view('indice');
+})->name('indice');
 
 Route::resource('/projetos', ProjetoController::class);/*->middleware('auth');*/
 

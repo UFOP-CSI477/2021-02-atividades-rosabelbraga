@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 15px; font-size:16pt;">
             <div class="container-fluid">
-              <a class="navbar-brand logo" href="{{route('home')}}">SAAD</a>
+              <a class="navbar-brand logo" href="{{route('indice')}}">SAAD</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -67,7 +67,6 @@
                 <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                  <a class="btn btn-secondary" href="login.html" role="button">Login</a>
                 </form>
               </div>
             </div>
@@ -76,10 +75,10 @@
 
     @if(session('mensagem'))
 
-        <div class="alert alert-">
-            <success>
-                {{ session('mensagem')}}
-            </success>
+        <div class="container">
+            <div class="alert alert-success">
+                {{ session('mensagem') }}
+            </div>
         </div>
 
     @endif
