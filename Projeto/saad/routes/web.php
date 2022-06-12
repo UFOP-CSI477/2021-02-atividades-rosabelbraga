@@ -29,6 +29,9 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+/*
+Route::put('/projetos/edit', 'ProjetoController@update')->name('projeto.update');
+*/
 
 Auth::routes();
 
