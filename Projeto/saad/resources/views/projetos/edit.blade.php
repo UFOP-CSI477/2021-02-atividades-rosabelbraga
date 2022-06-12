@@ -18,10 +18,10 @@
     </div>
 
     <div class="cadastroProjeto" style="font-size: 16pt;">
-        <form action="{{ route('projetos.store')}}" method="POST" class="row g-3">
+        <form action="{{ route('projetos.update', $projeto->id)}}" method="POST" class="row g-3">
 
             @csrf
-            <!--@method('PUT')-->
+            @method('PUT')
 
             <div class="row">
                 <div class="col-6">
