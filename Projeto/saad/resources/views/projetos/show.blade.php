@@ -46,7 +46,6 @@
             <p class="card-text">{{ $projeto->descricao }}</p>
             <p class="card-text">Rede social: {{ $projeto->url }}</p>
             <p class="card-text"><small class="text-muted">Criado em  {{ $projeto->created_at }} ; Última alteração em  {{ $projeto->updated_at }}</small></p>
-            <p class="card-text"><small class="text-muted">Última alteração foi em  {{ $projeto->updated_at }}</small></p>
         </div>
     </div>
     
