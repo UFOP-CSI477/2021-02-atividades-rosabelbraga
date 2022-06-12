@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('projetos', function (Blueprint $table) {
             $table->id();
             $table->string('nome_projeto', 100);
-            $table->text('email_responsavel');
+            $table->string('email_responsavel')->nullable();
             $table->string('endereco', 100)->nullable();
             $table->string('complemento', 100)->nullable();
             $table->string('estado', 50)->nullable();
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('cep', 9)->nullable();
             $table->longText('descricao')->nullable();
             $table->text('url')->nullable();
-            $table->binary('photo')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
