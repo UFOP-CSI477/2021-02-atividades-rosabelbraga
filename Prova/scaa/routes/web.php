@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Item;
+use App\Models\Coleta;
+use App\Models\Entidade;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

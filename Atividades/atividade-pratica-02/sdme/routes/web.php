@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Equipamento;
+use App\Models\Registro;
 
 /*
 |--------------------------------------------------------------------------
