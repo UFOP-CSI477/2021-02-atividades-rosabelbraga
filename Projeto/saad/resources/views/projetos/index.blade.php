@@ -23,7 +23,7 @@
     <table class="table table-bordered table-hover table-striped">
         <thead class="thead-dark">
             <tr>
-                <th>Nome projeto</th>
+                <th>Nome do projeto</th>
                 <th>Estado</th>
                 <th>Cidade</th>
                 <th>Exibir</th>

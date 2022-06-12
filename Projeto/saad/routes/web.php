@@ -30,36 +30,6 @@ Route::get('/home', function () {
 })->name('home');
 
 
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-// Route::get('/cadastro', function () {
-//     return view('cadastro');
-// });
-
-// Route::get('/lista', function () {
-//     $projetos = Projeto::all();
-
-//     return view('lista', [ 'dados' => $projetos ]);
-// });
-
-// Route::get('/lista/{$id}', function ($id) {
-    
-//     $projeto = Projeto::findOrFail($id);
-
-//     if( $projeto == null){
-//         return 'ID inválido';
-//     }
-
-//     return view('projetos', [ 'dados' => $projeto]);
-// });
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
