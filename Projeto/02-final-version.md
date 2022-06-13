@@ -34,17 +34,17 @@
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
   Após extrair a aplicação, é necessário entrar na pasta raiz do projeto e rodar o comando:
    
-    1. composer install
+    composer install
   
   Que carrega o processo de auto-load e as bibliotecas/dependencias do projeto.
 
   Após, deve ser executado o comando para rodar as migrations:
 
-    2. php artisan migrate
+    php artisan migrate
    
   Em seguida, com as dependências e a base de dados disponíveis, basta subir a aplicação, aplicando o seguinte comando:
 
-    3. php artisan serve 
+    php artisan serve 
 
 ### 6. Referências
 <!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
