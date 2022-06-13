@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Equipamento;
 use App\Models\Registro;
+use App\Http\Controllers\EquipamentoController;
+use App\Http\Controllers\RegistroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +20,11 @@ use App\Models\Registro;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/equipamentos', EquipamentoController::class);
+
+Route::resource('/registro', RegistroController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

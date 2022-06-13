@@ -14,7 +14,8 @@ class EquipamentoController extends Controller
      */
     public function index()
     {
-        
+        $equipamentos = Equipamento::orderBy('nome')->paginate(10);
+        return view('equipamentos.index', ['equipamentos' => $equipamentos]);
     }
 
     /**
@@ -46,7 +47,7 @@ class EquipamentoController extends Controller
      */
     public function show(Equipamento $equipamento)
     {
-        //
+        return view('equipamentos.show', ['equipamento' => $equipamento]);
     }
 
     /**
@@ -80,6 +81,14 @@ class EquipamentoController extends Controller
      */
     public function destroy(Equipamento $equipamento)
     {
-        //
+        if ( Auth::check() ) {
+            if($equipamento->delete()) {
+                session()->flash('mensagem', 'Equipamento excluído com sucesso!');
+                return redirect()->route('equipamentos.index');
+            } else {
+                session()->flash('mensagem-erro', 'Erro na exclusão do Equipamento!');
+                return back();
+            }
+        }
     }
 }

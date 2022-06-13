@@ -14,7 +14,8 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        //
+        $registros = Registro::orderBy('nome')->paginate(10);
+        return view('registros.index', ['registros' => $registros]);
     }
 
     /**
@@ -46,7 +47,7 @@ class RegistroController extends Controller
      */
     public function show(Registro $registro)
     {
-        //
+        return view('registros.show', ['registro' => $registro]);
     }
 
     /**
@@ -80,6 +81,14 @@ class RegistroController extends Controller
      */
     public function destroy(Registro $registro)
     {
-        //
+        if ( Auth::check() ) {
+            if($registro->delete()) {
+                session()->flash('mensagem', 'Registro excluído com sucesso!');
+                return redirect()->route('registros.index');
+            } else {
+                session()->flash('mensagem-erro', 'Erro na exclusão do Registro!');
+                return back();
+            }
+        }
     }
 }
