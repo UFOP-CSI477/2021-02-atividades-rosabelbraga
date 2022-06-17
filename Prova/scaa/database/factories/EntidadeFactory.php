@@ -17,7 +17,10 @@ class EntidadeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => $this->faker->company,
+            'bairro' => $this->faker->streetName,
+            'cidade' => $this->faker->city,
+            'estado' => $this->faker->state
         ];
     }
 }

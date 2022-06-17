@@ -17,7 +17,7 @@ class ItemFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'descricao' => $this->faker->realText($maxNbChars = 200, $indexSize = 2)
         ];
     }
 }
