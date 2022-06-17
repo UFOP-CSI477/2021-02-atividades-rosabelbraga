@@ -16,8 +16,20 @@ use App\Models\Entidade;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('indice');
+})->name('indice');
+
+Route::resource('/entidades', EntidadeController::class);
+Route::resource('/coletas', ColetaController::class);
+Route::resource('/itens', ItemController::class);
+
+Route::get('/geral', function () {
+    return view('geral');
+})->name('geral');
+
+Route::get('/administrativa', function () {
+    return view('administrativa');
+})->name('administrativa');
 
 Auth::routes();
 
