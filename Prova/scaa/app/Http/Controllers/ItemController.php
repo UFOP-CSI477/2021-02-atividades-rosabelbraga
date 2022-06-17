@@ -14,7 +14,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $itens = Item::orderBy('id')->get();
+        return view('item.index', ['item' => $itens]);
     }
 
     /**
@@ -24,7 +25,12 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        if ( Auth::check() ){
+            return view('item.create');    
+        } else {
+            session()->flash('mensagem-erro', 'Operação não permitida. Para realizar cadastro do item é necessário realizar login, ou se registrar na plataforma.' );
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -35,7 +41,9 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Item::create($request->all());
+        session()->flash('mensagem', 'Item cadastrada com sucesso!');
+        return redirect()->route('item.index');
     }
 
     /**
@@ -46,7 +54,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('item.show', ['item' => $item]);
     }
 
     /**
@@ -57,7 +65,12 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        //
+        if ( Auth::check() ){
+            return view('item.edit', ['item' => $item]);    
+        } else {
+            session()->flash('mensagem-erro', 'Operação não permitida.' );
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -69,7 +82,14 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        //
+        $item->fill($request->all());
+        if ($item->save()) {
+            session()->flash('mensagem', 'Item atualizado com sucesso!');
+            return redirect()->route('item.show', $item->id);
+        } else {
+            session()->flash('mensagem-erro', 'Erro na atualização do Item!');
+            return back()->withInput();
+        }
     }
 
     /**
@@ -80,6 +100,14 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        if ( Auth::check() ) {
+            if($item->delete()) {
+                session()->flash('mensagem', 'Item excluído com sucesso!');
+                return redirect()->route('item.index');
+            } else {
+                session()->flash('mensagem-erro', 'Erro na exclusão do Item!');
+                return back();
+            }
+        }
     }
 }

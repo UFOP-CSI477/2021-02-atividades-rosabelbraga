@@ -19,17 +19,19 @@ Route::get('/', function () {
     return view('indice');
 })->name('indice');
 
-Route::resource('/entidades', EntidadeController::class);
-Route::resource('/coletas', ColetaController::class);
-Route::resource('/itens', ItemController::class);
+Route::resource('/entidades', EntidadeController::class)->middleware('auth');;
+Route::resource('/coletas', ColetaController::class)->middleware('auth');;
+Route::resource('/itens', ItemController::class)->middleware('auth');
 
 Route::get('/geral', function () {
     return view('geral');
 })->name('geral');
 
-Route::get('/administrativa', function () {
-    return view('administrativa');
-})->name('administrativa');
+Route::middleware('auth')->group(function () {
+    Route::get('/administrativa', function () {
+        return view('administrativa');
+    })->name('administrativa');
+});
 
 Auth::routes();
 
