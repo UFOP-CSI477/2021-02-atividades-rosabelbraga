@@ -4,6 +4,6 @@
 
 ### Configurações
 
-* Navegador: Google Chrome
-* Framework: Laravel 9.17.0
-* Banco de dados: Sqlite
+* **Navegador**: Google Chrome
+* **Framework**: Laravel 9.17.0
+* **Banco de dados**: Sqlite
