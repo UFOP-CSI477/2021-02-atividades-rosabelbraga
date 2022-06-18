@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Coleta;
+use App\Models\Item;
+use App\Models\Entidade;
 use Illuminate\Http\Request;
 
 class ColetaController extends Controller
@@ -14,7 +16,7 @@ class ColetaController extends Controller
      */
     public function index()
     {
-        $coletas = Coleta::orderBy('id')->get();
+        $coletas = Coleta::orderBy('id')->paginate(15);
         return view('coleta.index', ['coleta' => $coletas]);
     }
 

@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Entidade extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['id', 'nome', 'bairro', 'cidade', 'estado'];
+
+    public function coletas() {
+        return $this->hasMany(Coleta::class);
+    }
 }

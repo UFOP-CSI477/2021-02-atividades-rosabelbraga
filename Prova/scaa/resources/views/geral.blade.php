@@ -60,6 +60,8 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+                    <a href="{{ route('indice') }}">Home</a>
+                    <a href="{{ route('administrativa') }}">Área administrativa</a>
                     <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
@@ -70,10 +72,69 @@
                     Geral
                 </div>
 
-                <div class="links">
-                    <a href="{{ route('entidade.index') }}">Entidades</a>
-                    <a href="{{ route('coleta.index') }}">Coletas</a>
-                    <a href="{{ route('item.index') }}">Itens</a>                   
+                <div style="display:flex;">
+                    <div>
+                        <h4>Total Geral de doações recebidas</h4>
+
+                        <table class="table table-bordered table-hover table-striped">
+
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Entidade</th>
+                                    <th>Itens</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach($coleta as $c)
+                                    <tr>
+                                        <td>{{ $c->entidade->nome }}</td>
+                                        <td>{{ $c->total_itens }}</td>
+                                    </tr>
+                                @endforeach
+
+                                <tr>
+                                    <td>TOTAL GERAL</td>
+                                    <td>{{ $total_geral }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <h4>Total de Itens recebidos</h4>
+                        
+                        <table class="table table-bordered table-hover table-striped">
+
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Quantidade</th>
+                                    <th>Porcentagem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach($coleta as $c)
+                                @php
+                                    $porcentagem = ($c->total_itens/$total_geral)*100 
+                                @endphp
+                                    
+                                    <tr>
+                                        <td>{{ $c->item->descricao }}</td>
+                                        <td>{{ $c->total_itens }}</td>
+                                        <td> {{ $porcentagem }} % </td>
+                                    </tr>
+                                @endforeach
+
+                                <tr>
+                                    <td>TOTAL GERAL</td>
+                                    <td>{{ $total_geral }}</td>
+                                    <td>100%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                                       
                 </div>                
             </div>
         </div>

@@ -32,8 +32,8 @@
 
             @foreach($coletas as $c)
                 <tr>
-                    <td>{{ $c->item_id }} </td>
-                    <td>{{ $c->entidade_id }}</td>
+                    <td>{{ $c->item->id }} </td>
+                    <td>{{ $c->entidade->id }}</td>
                     <td>{{ $c->quantidade }}</td>
                     <td>{{ $c->data }}</td>
                     <td><a href="{{route('coleta.show', $c->id)}}">Exibir</a></td>          

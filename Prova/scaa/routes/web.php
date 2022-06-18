@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Item;
 use App\Models\Coleta;
 use App\Models\Entidade;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ColetaController;
+use App\Http\Controllers\EntidadeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
